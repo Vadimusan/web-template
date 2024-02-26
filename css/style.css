@@ -12,6 +12,87 @@
 /* Main Styles Start */
 /* ############################################################### */
 
+:root {
+    --background-color: #323232;
+    --header-color: #000000;
+    --footer-color: #000000;
+    --aside-right-color: #a9a9a9;
+    --aside-left-color: #a9a9a9;
+
+    --color: #ffffff;
+
+    --title-color: #ffffff;
+    --text-color: #dbdbdb;
+    --text-hover-color: #ffff80;
+
+    --theme-button-color: #ffffff;
+    --theme-hover-color: #ffff00;
+
+    --button-color: #ffff00;
+    --button-text-color: #000000;
+    --button-hover-color: #ffff80;
+
+    --addition-color: #ffff00;
+
+    --card-background-color: #282828;
+    --card-border-color: #232323;
+    --card-background-hover-color: #393939;
+}
+
+[data-theme="light"] {
+    --background-color: #e9e9e9;
+    --header-color: #d4d4d4;
+    --footer-color: #d4d4d4;
+    --aside-right-color: #b7b2b2;
+    --aside-left-color: #b7b2b2;
+
+    --color: #000000;
+
+    --title-color: #000000;
+    --text-color: #292828;
+    --text-hover-color: #d34747;
+
+    --theme-button-color: #000000;
+    --theme-hover-color: #d34747;
+
+    --button-color: brown;
+    --button-text-color: #ffffff;
+    --button-hover-color: #d34747;
+
+    --addition-color: brown;
+
+    --card-background-color: #e3e3e3;
+    --card-border-color: #b7b2b2;
+    --card-background-hover-color: #f5f5f5;
+}
+
+[data-theme="dark"] {
+    --background-color: #323232;
+    --header-color: #000000;
+    --footer-color: #000000;
+    --aside-right-color: #a9a9a9;
+    --aside-left-color: #a9a9a9;
+
+    --color: #ffffff;
+
+    --title-color: #ffffff;
+    --text-color: #dbdbdb;
+    --text-hover-color: #ffff80;
+
+    --theme-button-color: #ffffff;
+    --theme-hover-color: #ffff00;
+
+    --button-color: #ffff00;
+    --button-text-color: #000000;
+    --button-hover-color: #ffff80;
+
+    --addition-color: #ffff00;
+
+    --card-background-color: #282828;
+    --card-border-color: #232323;
+    --card-background-hover-color: #393939;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -22,8 +103,8 @@
 body {
     font-family: 'Roboto', sans-serif;
 
-    background-color: #323232;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--color);
 
     font-size: 16px;
     font-weight: 400;
@@ -43,35 +124,10 @@ body {
 
 .header {
     grid-area: header;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: #000;
-
-    font-weight: 700;
-    font-size: 30px;
 }
 
 .main {
     grid-area: main;
-
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-
-.aside {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 100px;
-
-    background: darkgrey;
-
-    font-weight: 700;
-    font-size: 30px;
 }
 
 .aside-left {
@@ -84,15 +140,6 @@ body {
 
 .footer {
     grid-area: footer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: #000;
-
-    font-weight: 700;
-    font-size: 30px;
 }
 
 .container {
@@ -137,6 +184,102 @@ img {
 /* ############################################################### */
 
 /* ############################################################### */
+/* Header Start */
+/* ############################################################### */
+
+.header {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--header-color);
+
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.theme-switcher {
+    cursor: pointer;
+
+    position: absolute;
+    bottom: calc(50% - 8px);
+    right: 45px;
+}
+
+.theme-switcher-cover {
+    display: none;
+
+    height: 1.75rem;
+    width: 1.5rem;
+}
+
+.theme-switcher-active {
+    display: block;
+}
+
+.theme-switcher-light-image {
+    stroke: var(--theme-button-color);
+}
+
+.theme-switcher-dark-image {
+    stroke: var(--theme-button-color);
+}
+
+.theme-switcher-light-image:hover {
+    stroke: var(--theme-hover-color);
+}
+
+.theme-switcher-dark-image:hover {
+    stroke: var(--theme-hover-color);
+}
+
+/* ############################################################### */
+/* Header End */
+/* ############################################################### */
+
+/* ############################################################### */
+/* Aside Start */
+/* ############################################################### */
+
+.aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100px;
+
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.aside-left {
+    background-color: var(--aside-left-color);
+}
+
+.aside-right {
+    background-color: var(--aside-right-color);
+}
+
+/* ############################################################### */
+/* Aside End */
+/* ############################################################### */
+
+/* ############################################################### */
+/* Main Start */
+/* ############################################################### */
+
+.main {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* ############################################################### */
+/* Main End */
+/* ############################################################### */
+
+/* ############################################################### */
 /* Content Start */
 /* ############################################################### */
 
@@ -153,7 +296,7 @@ img {
 }
 
 .content-text-colored {
-    color: yellow;
+    color: var(--addition-color);
 }
 
 .content-button {
@@ -164,8 +307,8 @@ img {
     font-size: 16px;
     font-weight: 700;
 
-    background-color: yellow;
-    color: black;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
 
     cursor: pointer;
 
@@ -176,15 +319,15 @@ img {
 }
 
 .content-button:hover {
-    background-color: #ffff80;
+    background-color: var(--button-hover-color);
 }
 
 .content-link {
-    color: white;
+    color: var(--text-color);
 }
 
 .content-link:hover {
-    color: #ffff80;
+    color: var(--text-hover-color);
 }
 
 /* ############################################################### */
@@ -212,9 +355,9 @@ img {
 
     justify-content: center;
 
-    background-color: #282828;
+    background-color: var(--card-background-color);
 
-    border: 5px solid #232323;
+    border: 5px solid var(--card-border-color);
     border-radius: 5px;
 
     padding: 20px;
@@ -223,11 +366,12 @@ img {
 }
 
 .subgrid-block:hover {
-    background-color: #393939;
+    background-color: var(--card-background-hover-color);
 }
 
 .subgrid-text {
     text-indent: 10px;
+    color: var(--text-color);
 }
 
 .subgrid-image {
@@ -242,6 +386,25 @@ img {
 
 /* ############################################################### */
 /* Subgrid End */
+/* ############################################################### */
+
+/* ############################################################### */
+/* Footer Start */
+/* ############################################################### */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--footer-color);
+
+    font-weight: 700;
+    font-size: 30px;
+}
+
+/* ############################################################### */
+/* Footer End */
 /* ############################################################### */
 
 /* ############################################################### */

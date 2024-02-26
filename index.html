@@ -17,7 +17,36 @@
 <body>
 
 <div class="site">
-    <header class="header">Header</header>
+    <header class="header">
+        Header
+        <a class="theme-switcher" href="#">
+            <span class="theme-switcher-light theme-switcher-cover">
+                <svg class="theme-switcher-light-image" xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24" width="24" height="24"
+                     fill="none" stroke="#9ca3af" stroke-linecap="round" stroke-linejoin="round"
+                     stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </span>
+
+            <span class="theme-switcher-dark theme-switcher-cover">
+                <svg class="theme-switcher-dark-image"
+                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                     fill="none" stroke="#9ca3af" stroke-linecap="round"
+                     stroke-linejoin="round" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" x2="12" y1="1" y2="3"></line>
+                    <line x1="12" x2="12" y1="21" y2="23"></line>
+                    <line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+                    <line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+                    <line x1="1" x2="3" y1="12" y2="12"></line>
+                    <line x1="21" x2="23" y1="12" y2="12"></line>
+                    <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+                    <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+                </svg>
+            </span>
+        </a>
+    </header>
 
     <aside class="aside aside-left">Aside</aside>
 
@@ -33,7 +62,7 @@
                     <div class="lesson">
                         <button class="content-button">Click on me!</button>
                     </div>
-                    <a href="https://www.google.com" class="content-link">Google</a>
+                    <a class="content-link" href="https://www.google.com">Google</a>
                 </div>
             </div>
         </section>
