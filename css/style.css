@@ -25,18 +25,19 @@ body {
     background-color: #323232;
     color: white;
 
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
 }
 
 .site {
     display: grid;
-    grid-template-columns: 200px auto 200px;
-     grid-template-rows: 100px auto 100px;
+    grid-template-columns: minmax(100px, 200px) auto minmax(100px, 200px);
+    grid-template-rows: 100px auto 100px;
     grid-template-areas:
         "header header header"
         "aside-left main aside-right"
         "footer footer footer";
+
     min-height: 100vh
 }
 
@@ -101,6 +102,36 @@ body {
     padding: 0 20px;
 }
 
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
 /* ############################################################### */
 /* Main Styles End */
 /* ############################################################### */
@@ -110,20 +141,15 @@ body {
 /* ############################################################### */
 
 .content {
+    margin-bottom: 200px;
 }
 
 .content-title {
     margin-bottom: 20px;
-
-    font-size: 40px;
-    font-weight: 700;
 }
 
 .content-subtitle {
     margin-bottom: 40px;
-
-    font-size: 20px;
-    font-weight: 500;
 }
 
 .content-text-colored {
@@ -155,8 +181,6 @@ body {
 
 .content-link {
     color: white;
-
-    font-size: 16px;
 }
 
 .content-link:hover {
@@ -165,6 +189,59 @@ body {
 
 /* ############################################################### */
 /* Content End */
+/* ############################################################### */
+
+/* ############################################################### */
+/* Subgrid Start */
+/* ############################################################### */
+
+.subgrid-practice {
+}
+
+.subgrid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.subgrid-block {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    gap: 10px;
+
+    justify-content: center;
+
+    background-color: #282828;
+
+    border: 5px solid #232323;
+    border-radius: 5px;
+
+    padding: 20px;
+
+    transition: all 0.3s ease 0s;
+}
+
+.subgrid-block:hover {
+    background-color: #393939;
+}
+
+.subgrid-text {
+    text-indent: 10px;
+}
+
+.subgrid-image {
+    max-width: 510px;
+    max-height: 382px;
+
+    min-width: 200px;
+    min-height: 200px;
+
+    border-radius: 5px;
+}
+
+/* ############################################################### */
+/* Subgrid End */
 /* ############################################################### */
 
 /* ############################################################### */
